@@ -24,7 +24,7 @@ export class SettingsComponent implements OnInit {
         let total: number = this.userMoneyTree.savings + this.userMoneyTree.investment +
         this.userMoneyTree.expenses + this.userMoneyTree.donation;
 
-        if (total === 100) {
+        if (total === 100 && this.userMoneyTree.totalIncome > 0 && this.userCurrency.symbol.trim() && this.userCurrency.name.trim()) {
             return true;
         } else {
             return false;
@@ -32,7 +32,7 @@ export class SettingsComponent implements OnInit {
     }
 
     saveData() {
-        if (this.areValidInputs) {
+        if (this.areValidInputs()) {
             localStorage.userMoneyTree = JSON.stringify(this.userMoneyTree);
             localStorage.userCurrency = JSON.stringify(this.userCurrency);
             this.location.back();

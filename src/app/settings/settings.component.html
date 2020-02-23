@@ -1,30 +1,54 @@
-<section class="upfold">
-    <section class="total-pay">
-        <h2> Dissemination </h2>
+<div class="page-container">
+
+    <section class="upfold">
+        <section class="total-pay">
+            <h2> Dissemination </h2>
+        </section>
     </section>
-</section>
 
-<ul class="dissemination-list">
-    <p> <strong> Note: </strong> The total % must add upto 100 </p>
-    <li>
-        <label> <div class="percentage"> % </div> Savings </label>
-        <input class="value" type="number" [(ngModel)]="userMoneyTree.savings">
-    </li>
+    <ul class="dissemination-list">
+        <p> <strong> Note: </strong> The total % must add upto 100 </p>
 
-    <li>
-        <label> <div class="percentage"> % </div> Investment </label>
-        <input class="value" type="number" [(ngModel)]="userMoneyTree.investment">
-    </li>
+        <li>
+            <label> <div class="percentage"> T </div> Total </label>
+            <input class="value" type="number" [(ngModel)]="userMoneyTree.totalIncome">
+        </li>
 
-    <li>
-        <label> <div class="percentage"> % </div> Expenses </label>
-        <input class="value" type="number" [(ngModel)]="userMoneyTree.expenses">
-    </li>
+        <li>
+            <label> <div class="percentage"> % </div> Savings </label>
+            <input class="value" type="number" [(ngModel)]="userMoneyTree.savings">
+        </li>
 
-    <li>
-        <label> <div class="percentage"> % </div> Donation </label>
-        <input class="value" type="number" [(ngModel)]="userMoneyTree.donation">
-    </li>
-</ul>
+        <li>
+            <label> <div class="percentage"> % </div> Investment </label>
+            <input class="value" type="number" [(ngModel)]="userMoneyTree.investment">
+        </li>
 
-<button class="save-button" *ngIf="areValidInputs()" (click)="saveData()"> SAVE </button>
+        <li>
+            <label> <div class="percentage"> % </div> Expenses </label>
+            <input class="value" type="number" [(ngModel)]="userMoneyTree.expenses">
+        </li>
+
+        <li>
+            <label> <div class="percentage"> % </div> Donation </label>
+            <input class="value" type="number" [(ngModel)]="userMoneyTree.donation">
+        </li>
+    </ul>
+
+    <ul class="dissemination-list">
+        <p> Currency </p>
+
+        <li>
+            <label> <div class="percentage"> S </div> Symbol </label>
+            <input class="value" type="text" [(ngModel)]="userCurrency.symbol">
+        </li>
+
+        <li>
+            <label> <div class="percentage"> N </div> Name </label>
+            <input class="value" type="text" [(ngModel)]="userCurrency.name">
+        </li>
+    </ul>
+
+    <button class="save-button" *ngIf="areValidInputs()" (click)="saveData()"> SAVE </button>
+
+</div>
