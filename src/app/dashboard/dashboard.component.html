@@ -1,1 +1,32 @@
-<p>dashboard works!</p>
+<section class="upfold">
+    <div class="container">
+        <button class="name-logo"> N </button>
+        <button class="settings-button"> Change Dissemination </button>
+    </div>
+    <section class="total-pay">
+        <p> Total Income per month </p>
+        <h2> {{ userCurrency.symbol }} {{ userMoneyTree.totalIncome }} </h2>
+    </section>
+</section>
+
+<ul class="dissemination-list">
+    <li>
+        <label> Savings </label>
+        <div class="value"> {{ getCalculatedAmount(userMoneyTree.savings) }} </div>
+    </li>
+
+    <li>
+        <label> Investment </label>
+        <div class="value"> {{ getCalculatedAmount(userMoneyTree.investment) }} </div>
+    </li>
+
+    <li>
+        <label> Expenses </label>
+        <div class="value"> {{ getCalculatedAmount(userMoneyTree.expenses) }} </div>
+    </li>
+
+    <li>
+        <label> Donation </label>
+        <div class="value"> {{ getCalculatedAmount(userMoneyTree.donation) }} </div>
+    </li>
+</ul>
