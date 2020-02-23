@@ -1,0 +1,14 @@
+@import "../settings/settings.component.scss";
+
+
+p {
+    width: 90%;
+    margin: 15px auto;
+    color: dimgrey;
+    font-size: 18px;
+    line-height: 1.8;
+
+    a {
+        color: $dark-teal;
+    }
+}

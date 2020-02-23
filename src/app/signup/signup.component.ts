@@ -18,6 +18,10 @@ export class SignupComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        if (!localStorage.firstTimer) {
+            localStorage.firstTimer = false;
+            this.aboutPage();
+        }
     }
 
     areInputsValid() {
@@ -33,6 +37,10 @@ export class SignupComponent implements OnInit {
             localStorage.userProfile = JSON.stringify(this.userProfile);
             this.router.navigate(['settings']);
         }
+    }
+
+    aboutPage() {
+        this.router.navigate(['about']);
     }
 
 }

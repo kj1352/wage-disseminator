@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 export type IProfile = {
     name: string,
@@ -15,7 +16,8 @@ export class ProfileComponent implements OnInit {
     userProfile: IProfile;
 
     constructor(
-        private location: Location
+        private location: Location,
+        private router: Router
     ) { }
 
     ngOnInit() {
@@ -40,6 +42,10 @@ export class ProfileComponent implements OnInit {
     deRegister() {
         localStorage.clear();
         location.reload();
+    }
+
+    aboutPage() {
+        this.router.navigate(['about']);
     }
 
 }
