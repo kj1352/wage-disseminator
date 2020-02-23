@@ -5,6 +5,8 @@
             <input type="tel" [(ngModel)]="passkey">
         </div>
 
+        <p *ngIf="errMessage"> {{ errMessage }} </p>
+
         <button (click)="authenticateUser()"> Login </button>
     </section>
 </section>

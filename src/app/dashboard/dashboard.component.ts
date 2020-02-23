@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IProfile } from '../profile/profile.component';
 
 export type IMoneyTree = {
     totalIncome: number,
@@ -22,7 +23,7 @@ export type ICurrency = {
 
 export class DashboardComponent implements OnInit {
     userCurrency: ICurrency;
-
+    userProfile: IProfile;
     userMoneyTree: IMoneyTree;
 
     constructor(
@@ -32,6 +33,11 @@ export class DashboardComponent implements OnInit {
     ngOnInit() {
         this.userMoneyTree = JSON.parse(localStorage.userMoneyTree);
         this.userCurrency = JSON.parse(localStorage.userCurrency);
+        this.userProfile = JSON.parse(localStorage.userProfile);
+    }
+
+    getFirstLetter(name: string) {
+        return name.charAt(0);
     }
 
     getCalculatedAmount(percentage: number) {

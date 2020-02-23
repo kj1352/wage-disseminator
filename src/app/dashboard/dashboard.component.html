@@ -1,7 +1,7 @@
 <div class="page-container">
     <section class="upfold">
         <div class="container">
-            <button class="name-logo" (click)="navigateToUrl('profile')"> N </button>
+            <button class="name-logo" (click)="navigateToUrl('profile')"> {{ getFirstLetter(this.userProfile.name) }} </button>
             <button class="settings-button" (click)="navigateToUrl('settings')"> Change Dissemination </button>
         </div>
         <section class="total-pay">

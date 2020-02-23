@@ -37,4 +37,9 @@ export class ProfileComponent implements OnInit {
         }
     }
 
+    deRegister() {
+        localStorage.clear();
+        location.reload();
+    }
+
 }
