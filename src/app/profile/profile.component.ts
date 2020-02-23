@@ -44,6 +44,10 @@ export class ProfileComponent implements OnInit {
         location.reload();
     }
 
+    reload() {
+        location.reload();
+    }
+
     aboutPage() {
         this.router.navigate(['about']);
     }
