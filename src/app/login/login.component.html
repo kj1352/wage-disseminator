@@ -1,1 +1,10 @@
-<p>login works!</p>
+<section class="container">
+    <section class="form">
+        <div class="input-holder">
+            <label> Pass Key* </label>
+            <input type="tel" [(ngModel)]="passkey">
+        </div>
+
+        <button (click)="authenticateUser()"> Login </button>
+    </section>
+</section>

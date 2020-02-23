@@ -1,35 +1,38 @@
-<section class="upfold">
-    <div class="container">
-        <button class="name-logo"> N </button>
-        <button class="settings-button" (click)="navigateToUrl('settings')"> Change Dissemination </button>
-    </div>
-    <section class="total-pay">
-        <p> Total Income per month </p>
-        <h2> {{ userCurrency.symbol }} {{ userMoneyTree.totalIncome }} </h2>
+<div class="page-container">
+    <section class="upfold">
+        <div class="container">
+            <button class="name-logo" (click)="navigateToUrl('profile')"> N </button>
+            <button class="settings-button" (click)="navigateToUrl('settings')"> Change Dissemination </button>
+        </div>
+        <section class="total-pay">
+            <p> Total Income per month </p>
+            <h2> {{ userCurrency.symbol }} {{ userMoneyTree.totalIncome }} </h2>
+        </section>
     </section>
-</section>
 
-<ul class="dissemination-list">
-    <header>
-        <h3> Dissemination </h3>
-    </header>
-    <li>
-        <label> <div class="percentage"> {{ userMoneyTree.savings }}% </div> Savings </label>
-        <div class="value"> {{ getCalculatedAmount(userMoneyTree.savings) }} </div>
-    </li>
+    <ul class="dissemination-list">
+        <header>
+            <h3> Dissemination </h3>
+        </header>
+        <li>
+            <label> <div class="percentage"> {{ userMoneyTree.savings }}% </div> Savings </label>
+            <div class="value"> {{ getCalculatedAmount(userMoneyTree.savings) }} </div>
+        </li>
 
-    <li>
-        <label> <div class="percentage"> {{ userMoneyTree.investment }}% </div> Investment </label>
-        <div class="value"> {{ getCalculatedAmount(userMoneyTree.investment) }} </div>
-    </li>
+        <li>
+            <label> <div class="percentage"> {{ userMoneyTree.investment }}% </div> Investment </label>
+            <div class="value"> {{ getCalculatedAmount(userMoneyTree.investment) }} </div>
+        </li>
 
-    <li>
-        <label> <div class="percentage"> {{ userMoneyTree.expenses }}% </div> Expenses </label>
-        <div class="value"> {{ getCalculatedAmount(userMoneyTree.expenses) }} </div>
-    </li>
+        <li>
+            <label> <div class="percentage"> {{ userMoneyTree.expenses }}% </div> Expenses </label>
+            <div class="value"> {{ getCalculatedAmount(userMoneyTree.expenses) }} </div>
+        </li>
 
-    <li>
-        <label> <div class="percentage"> {{ userMoneyTree.donation }}% </div> Donation </label>
-        <div class="value"> {{ getCalculatedAmount(userMoneyTree.donation) }} </div>
-    </li>
-</ul>
+        <li>
+            <label> <div class="percentage"> {{ userMoneyTree.donation }}% </div> Donation </label>
+            <div class="value"> {{ getCalculatedAmount(userMoneyTree.donation) }} </div>
+        </li>
+    </ul>
+
+</div>

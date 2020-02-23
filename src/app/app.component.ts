@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ICurrency, IMoneyTree } from './dashboard/dashboard.component';
+import { IProfile } from './profile/profile.component';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -20,13 +22,29 @@ export class AppComponent {
         name: 'Rupee'
     };
 
-    constructor() {
+    userProfile: IProfile;
+
+    constructor(
+        private router: Router
+    ) {
         if (!localStorage.userMoneyTree) {
             localStorage.userMoneyTree = JSON.stringify(this.userMoneyTree);
         }
 
         if (!localStorage.userCurrency) {
             localStorage.userCurrency = JSON.stringify(this.userCurrency);
+        }
+
+        if (!localStorage.userProfile) {
+            this.router.navigate(['signup']);
+        }
+
+        if (localStorage.userProfile) {
+            if (JSON.parse(localStorage.userProfile).passkey) {
+                this.router.navigate(['login']);
+            } else {
+                this.router.navigate(['signup']);
+            }
         }
     }
 }

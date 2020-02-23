@@ -1,6 +1,10 @@
 $dark-teal: #21cfbb;
 $teal: #6aeeab;
 
+.page-container {
+    padding-bottom: 50px;
+}
+
 .upfold {
     background: linear-gradient(45deg, $dark-teal, $teal);
     padding: 20px 5%;

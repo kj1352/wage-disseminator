@@ -1,0 +1,32 @@
+<div class="page-container">
+
+    <section class="upfold">
+        <section class="total-pay">
+            <h2> Profile </h2>
+        </section>
+    </section>
+
+    <ul class="dissemination-list">
+        <li>
+            <label> <div class="percentage"> N </div> Name </label>
+            <input class="value" type="text" [(ngModel)]="userProfile.name">
+        </li>
+        <li>
+            <label> <div class="percentage"> P </div> Passkey </label>
+            <input class="value" type="tel" [(ngModel)]="userProfile.passkey">
+        </li>
+    </ul>
+
+    <ul class="dissemination-list">
+        <p> Other </p>
+        <li>
+            <label> <div class="percentage"> A </div> About </label>
+        </li>
+        <li>
+            <label> <div class="percentage"> D </div> De Register </label>
+        </li>
+    </ul>
+
+    <button class="save-button" *ngIf="areValidInputs()" (click)="updateUser()"> SAVE </button>
+
+</div>

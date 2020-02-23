@@ -1,0 +1,60 @@
+$dark-teal: #21cfbb;
+$teal: #6aeeab;
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, $dark-teal, $teal);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+        background-color: white;
+        border-radius: 7px;
+        width: 80%;
+        padding: 20px 5%;
+    }
+
+    .input-holder {
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: dimgrey;
+            margin-bottom: 10px;
+        }
+
+        input {
+            height: 30px;
+            border: 0;
+            border-bottom: 2px solid dimgrey;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            color: $dark-teal;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: dimgrey;
+        margin-bottom: 20px;
+        color: $dark-teal;
+        line-height: 1.5;
+    }
+
+    button {
+        width: 100%;
+        display: block;
+        background: linear-gradient(45deg, $dark-teal, $teal);
+        font-size: 14px;
+        color: white;
+        border-radius: 3px;
+        border: 0px;
+        height: 50px;
+        box-shadow: 0px 0px 5px #cecece;
+    }
+}
