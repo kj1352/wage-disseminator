@@ -10,23 +10,26 @@
 </section>
 
 <ul class="dissemination-list">
+    <header>
+        <h3> Dissemination </h3>
+    </header>
     <li>
-        <label> Savings </label>
+        <label> <div class="percentage"> {{ userMoneyTree.savings }}% </div> Savings </label>
         <div class="value"> {{ getCalculatedAmount(userMoneyTree.savings) }} </div>
     </li>
 
     <li>
-        <label> Investment </label>
+        <label> <div class="percentage"> {{ userMoneyTree.investment }}% </div> Investment </label>
         <div class="value"> {{ getCalculatedAmount(userMoneyTree.investment) }} </div>
     </li>
 
     <li>
-        <label> Expenses </label>
+        <label> <div class="percentage"> {{ userMoneyTree.expenses }}% </div> Expenses </label>
         <div class="value"> {{ getCalculatedAmount(userMoneyTree.expenses) }} </div>
     </li>
 
     <li>
-        <label> Donation </label>
+        <label> <div class="percentage"> {{ userMoneyTree.donation }}% </div> Donation </label>
         <div class="value"> {{ getCalculatedAmount(userMoneyTree.donation) }} </div>
     </li>
 </ul>
