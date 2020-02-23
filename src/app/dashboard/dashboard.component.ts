@@ -48,4 +48,21 @@ export class DashboardComponent implements OnInit {
         this.router.navigate([url]);
     }
 
+    share() {
+        let newVariable: any;
+        newVariable = window.navigator;
+
+        if (newVariable && newVariable.share) {
+            newVariable.share({
+                title: 'Wage Disseminator',
+                text: 'Check out this Web App!',
+                url: 'https://wage-disseminator.firebaseapp.com',
+            })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+        } else {
+            alert("Share not supported");
+        }
+    }
+
 }
