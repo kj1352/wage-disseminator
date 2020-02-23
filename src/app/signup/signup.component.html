@@ -1,21 +1,25 @@
 <section class="container">
-    <section class="form">
-        <div class="input-holder">
-            <label> Full Name* </label>
-            <input type="text" [(ngModel)]="userProfile.name">
-        </div>
+    <div class="form-holder">
+        <header> Wage Disseminator </header>
+        <p class="description"> Plan your month before you spend... </p>
+        <section class="form">
+            <div class="input-holder">
+                <label> Full Name* </label>
+                <input type="text" [(ngModel)]="userProfile.name">
+            </div>
 
-        <div class="input-holder">
-            <label> Pass Key* </label>
-            <input type="tel" [(ngModel)]="userProfile.passkey">
-        </div>
+            <div class="input-holder">
+                <label> Pass Key* </label>
+                <input type="tel" [(ngModel)]="userProfile.passkey">
+            </div>
 
-        <p *ngIf="!areInputsValid()">
-            The Passkey length must be atleast 4 &amp;
-            <br>
-            Name must contain atleast 1 letter
-        </p>
+            <p *ngIf="!areInputsValid()">
+                The Passkey length must be atleast 4 &amp;
+                <br>
+                Name must contain atleast 1 letter
+            </p>
 
-        <button *ngIf="areInputsValid()" (click)="registerUser()"> Signup </button>
-    </section>
+            <button *ngIf="areInputsValid()" (click)="registerUser()"> SIGNUP </button>
+        </section>
+    </div>
 </section>

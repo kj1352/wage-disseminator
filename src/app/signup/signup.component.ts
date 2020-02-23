@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
     registerUser() {
         if (this.areInputsValid()) {
             localStorage.userProfile = JSON.stringify(this.userProfile);
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['settings']);
         }
     }
 

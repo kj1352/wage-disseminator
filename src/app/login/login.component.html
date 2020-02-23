@@ -1,12 +1,18 @@
 <section class="container">
-    <section class="form">
-        <div class="input-holder">
-            <label> Pass Key* </label>
-            <input type="tel" [(ngModel)]="passkey">
-        </div>
+    <div class="form-holder">
+        <header> Wage Disseminator </header>
+        <p class="description"> Plan your month before you spend... </p>
+        <section class="form">
+            <div class="input-holder">
+                <label> Pass Key* </label>
+                <input type="tel" [(ngModel)]="passkey">
+            </div>
 
-        <p *ngIf="errMessage"> {{ errMessage }} </p>
+            <p *ngIf="errMessage"> {{ errMessage }} </p>
 
-        <button (click)="authenticateUser()"> Login </button>
-    </section>
+            <button (click)="authenticateUser()"> LOGIN </button>
+
+            <button class="reset" (click)="deRegister()"> RESET DATA </button>
+        </section>
+    </div>
 </section>

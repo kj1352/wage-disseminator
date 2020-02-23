@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICurrency, IMoneyTree } from '../dashboard/dashboard.component';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-settings',
@@ -12,7 +12,7 @@ export class SettingsComponent implements OnInit {
     userCurrency: ICurrency;
 
     constructor(
-        private location: Location
+        private router: Router
     ) { }
 
     ngOnInit() {
@@ -35,7 +35,7 @@ export class SettingsComponent implements OnInit {
         if (this.areValidInputs()) {
             localStorage.userMoneyTree = JSON.stringify(this.userMoneyTree);
             localStorage.userCurrency = JSON.stringify(this.userCurrency);
-            this.location.back();
+            this.router.navigate(['dashboard']);
         }
     }
 

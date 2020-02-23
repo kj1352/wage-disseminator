@@ -32,4 +32,9 @@ export class LoginComponent implements OnInit {
             this.showError("Please check your passkey")
         }
     }
+
+    deRegister() {
+        localStorage.clear();
+        location.reload();
+    }
 }
