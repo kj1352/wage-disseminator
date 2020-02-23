@@ -1,1 +1,30 @@
-<p>settings works!</p>
+<section class="upfold">
+    <section class="total-pay">
+        <h2> Dissemination </h2>
+    </section>
+</section>
+
+<ul class="dissemination-list">
+    <p> <strong> Note: </strong> The total % must add upto 100 </p>
+    <li>
+        <label> <div class="percentage"> % </div> Savings </label>
+        <input class="value" type="number" [(ngModel)]="userMoneyTree.savings">
+    </li>
+
+    <li>
+        <label> <div class="percentage"> % </div> Investment </label>
+        <input class="value" type="number" [(ngModel)]="userMoneyTree.investment">
+    </li>
+
+    <li>
+        <label> <div class="percentage"> % </div> Expenses </label>
+        <input class="value" type="number" [(ngModel)]="userMoneyTree.expenses">
+    </li>
+
+    <li>
+        <label> <div class="percentage"> % </div> Donation </label>
+        <input class="value" type="number" [(ngModel)]="userMoneyTree.donation">
+    </li>
+</ul>
+
+<button class="save-button" *ngIf="areValidInputs()" (click)="saveData()"> SAVE </button>

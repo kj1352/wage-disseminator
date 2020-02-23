@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 export type IMoneyTree = {
     totalIncome: number,
@@ -20,26 +21,25 @@ export type ICurrency = {
 })
 
 export class DashboardComponent implements OnInit {
-    userCurrency: ICurrency = {
-        symbol: '₹',
-        name: 'Rupee'
-    };
+    userCurrency: ICurrency;
 
-    userMoneyTree: IMoneyTree = {
-        totalIncome: 1000,
-        savings: 30,
-        investment: 10,
-        expenses: 50,
-        donation: 10
-    };
+    userMoneyTree: IMoneyTree;
 
-    constructor() { }
+    constructor(
+        private router: Router
+    ) { }
 
     ngOnInit() {
+        this.userMoneyTree = JSON.parse(localStorage.userMoneyTree);
+        this.userCurrency = JSON.parse(localStorage.userCurrency);
     }
 
     getCalculatedAmount(percentage: number) {
         return this.userCurrency.symbol + ' ' + (this.userMoneyTree.totalIncome * percentage / 100).toString();
+    }
+
+    navigateToUrl(url: string) {
+        this.router.navigate([url]);
     }
 
 }

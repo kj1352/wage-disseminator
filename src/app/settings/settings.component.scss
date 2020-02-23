@@ -1,0 +1,29 @@
+@import "../dashboard/dashboard.component.scss";
+
+.dissemination-list li .value {
+    border: 0px;
+    border-bottom: 2px solid $dark-teal;
+    background-color: transparent;
+    color: #efefef;
+    height: 40px;
+    font-size: 16px;
+    color: $dark-teal;
+    text-align: center;
+    font-weight: 500;
+}
+
+.save-button {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    background: linear-gradient(45deg, $dark-teal, $teal);
+    font-size: 14px;
+    color: white;
+    border-radius: 3px;
+    border: 0px;
+    height: 50px;
+    box-shadow: 0px 0px 5px #cecece;
+}
