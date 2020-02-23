@@ -41,7 +41,7 @@ export class AppComponent {
 
         if (localStorage.userProfile) {
             if (JSON.parse(localStorage.userProfile).passkey) {
-                this.router.navigate(['dashboard']);
+                this.router.navigate(['login']);
             } else {
                 this.router.navigate(['signup']);
             }
